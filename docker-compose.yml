@@ -1,0 +1,8 @@
+postgres:
+  image: postgres:bullseye
+  ports:
+    - "5432:5432"
+  environment:
+    - POSTGRES_USER=16bits
+    - POSTGRES_PASSWORD=tech
+    - POSTGRES_DB=hibernate_quickstart

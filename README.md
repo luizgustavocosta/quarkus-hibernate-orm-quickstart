@@ -23,6 +23,16 @@ To compile and run this demo you will need:
 
 In addition, you will need either a PostgreSQL database, or Docker to run one.
 
+## Docker image
+Use the docker-compose file
+
+## Access the Database
+```bash
+docker exec -it PostgreSQL bash
+su postgres
+psql
+```
+
 ### Configuring GraalVM and JDK 11+
 
 Make sure that both the `GRAALVM_HOME` and `JAVA_HOME` environment variables have
