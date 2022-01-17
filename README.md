@@ -129,3 +129,28 @@ Then, rebuild demo docker image with a system property that points to the DB.
 ```bash
 -Dquarkus.datasource.jdbc.url=jdbc:postgresql://<DB_SERVICE_NAME>/quarkus_test
 ```
+
+## Running the demo using RedHat OpenShift
+Install the PostgreSQL ephemeral and configure this service to have the following configuration
+
+Create a new user, eg, `luiz`,`tech`.
+
+```bash
+CREATE USER luiz WITH PASSWORD 'tech';
+GRANT ALL PRIVILEGES ON DATABASE hibernate_db TO luiz;
+```
+
+Deploy the application, using DevNation and add the following env variables
+
+| # | Key                         | Value                                  |  
+|---|-----------------------------|----------------------------------------|
+| 1 | QUARKUS_DATASOURCE_JDBC_URL | jdbc:postgresql://postgresql:5432/hibernate_db |
+| 2 | QUARKUS_DATASOURCE_USERNAME | user                                   |
+| 3 | QUARKUS_DATASOURCE_PASSWORD | password                               |
+
+
+
+### References
+* [PostgreSQL commands](https://tableplus.com/blog/2018/04/postgresql-how-to-grant-access-to-users.html)
+* [RedHat DevNation](https://developers.redhat.com/devnation)
+* [Quarkus](https://quarkus.io/guides/hibernate-orm)

@@ -3,6 +3,6 @@ postgres:
   ports:
     - "5432:5432"
   environment:
-    - POSTGRES_USER=16bits
+    - POSTGRES_USER=luiz
     - POSTGRES_PASSWORD=tech
     - POSTGRES_DB=hibernate_quickstart
