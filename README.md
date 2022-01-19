@@ -149,6 +149,14 @@ Deploy the application, using DevNation and add the following env variables
 | 3 | QUARKUS_DATASOURCE_PASSWORD | password                               |
 
 
+### Access via OC 
+Install the oc using brew
+```bash
+brew install openshift-cli
+```
+
+More references (click here)[https://docs.openshift.com/container-platform/4.7/cli_reference/openshift_cli/developer-cli-commands.html]
+
 
 ### References
 * [PostgreSQL commands](https://tableplus.com/blog/2018/04/postgresql-how-to-grant-access-to-users.html)
